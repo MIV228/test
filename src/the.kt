@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test
 import kotlin.math.PI
 import kotlin.math.pow
+import kotlin.system.exitProcess
 import kotlin.test.assertEquals
 
 class the() {
@@ -12,17 +13,42 @@ class the() {
     }
 }
 fun main() {
-    var a = readLine()!!.toString()
-    when (a) {
-        "0" -> the()
-        "a1" -> a1()
-        "a2" -> a2()
+    println("Решать дальше?(0/1)")
+    var b = readLine()!!.toString()
+    when (b) {
+        "0" -> {
+            println("Какая задача?")
+            var a = readLine()!!.toString()
+            when (a) {
+                "0" -> the()
+                "a1" -> a1()
+                "a2" -> a2()
+                "a18" -> a18()
+                else -> {
+                    println("При вычислениях произошла ошибка.")
+                    println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
+                    main()
+                }
+            }
+        }
+        "1" -> {
+            println("ок")
+            exitProcess(0)
+        }
+        else -> {
+            println("При вычислениях произошла ошибка.")
+            println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
+            main()
+        }
     }
+
+
 }
 fun b4(d : Double): Double {
     var pi = PI
     var L = pi * d
     return L
+    main()
 }
 
 fun a1() {
@@ -31,6 +57,7 @@ fun a1() {
         it * 2 + 1
     }
     println(arr)
+    main()
 }
 
 fun a2() {
@@ -38,8 +65,23 @@ fun a2() {
         2.0.pow(it)
     }
     println(arr)
+    main()
 }
 
+fun a18() {
+    var a = List(10) {
+        (1..9).random()
+    }
+    var b = a.findLast { a[0] < it && it < a[9] }
+    if (b == null) {
+        println(a)
+        println(0)
+    } else {
+        println(a)
+        println(b)
+    }
+    main()
+}
 
 //fun a4(a : Int, b : Int) {
 //    var n = 10
