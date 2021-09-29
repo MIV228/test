@@ -1,6 +1,6 @@
 
-fun main() {
-}
+//fun main() {
+//}
 fun countRedBeads(nBlue : Int, nRed : Int): Int {
     if (nBlue < 2) {
         nRed == 0
