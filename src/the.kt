@@ -24,6 +24,7 @@ fun main() {
                 "a1" -> a1()
                 "a2" -> a2()
                 "a18" -> a18()
+                "a65" -> a65()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -32,8 +33,10 @@ fun main() {
             }
         }
         "1" -> {
-            println("ок")
-            exitProcess(0)
+            val a = Int.MAX_VALUE
+            println("Ок")
+            println("ВЫПОЛНЯЕТСЯ ВЫХОД ИЗ СИСТЕМЫ")
+            exitProcess(a)
         }
         else -> {
             println("При вычислениях произошла ошибка.")
@@ -83,6 +86,23 @@ fun a18() {
     main()
 }
 
+fun a65() {
+    var n = 10
+    var k = 5
+    var a = List(n) {
+//        if (it == k) {
+//            var int = it
+//        }
+        it
+    }
+    var a2 = List(n) {
+        a[it] + k
+    }
+    println(a)
+    println(a2)
+    main()
+}
+
 //fun a4(a : Int, b : Int) {
 //    var n = 10
 //    var A = 2
@@ -91,4 +111,3 @@ fun a18() {
 //
 //    }
 //}
-//amogus
