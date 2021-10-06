@@ -12,7 +12,6 @@ class the() {
         assertEquals(result, b4(d), "Access denied")
     }
 }
-
 fun main() {
     println("Решать дальше?(0/1)")
     var b = readLine()!!.toString()
@@ -25,8 +24,7 @@ fun main() {
                 "a1" -> a1()
                 "a2" -> a2()
                 "a18" -> a18()
-                "a65" -> a65()
-                "a66" -> a66()
+                "p16" -> p16()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -35,10 +33,8 @@ fun main() {
             }
         }
         "1" -> {
-            val a = Int.MAX_VALUE
-            println("Ок")
-            println("ВЫПОЛНЯЕТСЯ ВЫХОД ИЗ СИСТЕМЫ")
-            exitProcess(a)
+            println("ок")
+            exitProcess(0)
         }
         else -> {
             println("При вычислениях произошла ошибка.")
@@ -49,8 +45,7 @@ fun main() {
 
 
 }
-
-fun b4(d: Double): Double {
+fun b4(d : Double): Double {
     var pi = PI
     var L = pi * d
     return L
@@ -89,35 +84,24 @@ fun a18() {
     main()
 }
 
-fun a65() {
-    var n = 10
-    var k = 5
-    var a = List(n) {
-//        if (it == k) {
-//            var int = it
-//        }
-        it
-    }
-    var a2 = List(n) {
-        a[it] + k
-    }
+fun p16() {
+    var a = (-10..10).random()
     println(a)
-    println(a2)
+    Sign(a)
     main()
 }
 
-fun a66() {
-    var n = 10
-    var list = List(n) {
-        (1..9).random()
+fun Sign(x : Int) : Int {
+    if (x < 0) {
+        println(-1)
+        return -1
+    } else if (x == 0) {
+        println(0)
+        return 0
+    } else {
+        println(1)
+        return 1
     }
-    var a = list.find { it % 2 == 0 }
-    var l2 = list.map {
-        if ((it % 2) == 0) {
-        it + a!!
-        }
-    }
-    println(l2)
 }
 
 //fun a4(a : Int, b : Int) {
@@ -128,3 +112,4 @@ fun a66() {
 //
 //    }
 //}
+//amogus
