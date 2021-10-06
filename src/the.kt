@@ -92,16 +92,31 @@ fun p16() {
 }
 
 fun Sign(x : Int) : Int {
-    if (x < 0) {
-        println(-1)
-        return -1
-    } else if (x == 0) {
-        println(0)
-        return 0
-    } else {
-        println(1)
-        return 1
+    return when {
+        x < 0 -> {
+            println(-1)
+            -1
+        }
+        x == 0 -> {
+            println(0)
+            0
+        }
+        x > 0 -> {
+            println(1)
+            1
+        }
+        else -> Int.MAX_VALUE
     }
+//    if (x < 0) {
+//        println(-1)
+//        return -1
+//    } else if (x == 0) {
+//        println(0)
+//        return 0
+//    } else {
+//        println(1)
+//        return 1
+//    }
 }
 
 //fun a4(a : Int, b : Int) {
