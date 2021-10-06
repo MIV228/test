@@ -12,6 +12,7 @@ class the() {
         assertEquals(result, b4(d), "Access denied")
     }
 }
+
 fun main() {
     println("Решать дальше?(0/1)")
     var b = readLine()!!.toString()
@@ -25,6 +26,7 @@ fun main() {
                 "a2" -> a2()
                 "a18" -> a18()
                 "p16" -> p16()
+                "p18" -> p18()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -45,7 +47,8 @@ fun main() {
 
 
 }
-fun b4(d : Double): Double {
+
+fun b4(d: Double): Double {
     var pi = PI
     var L = pi * d
     return L
@@ -91,7 +94,7 @@ fun p16() {
     main()
 }
 
-fun Sign(x : Int) : Int {
+fun Sign(x: Int): Int {
     return when {
         x < 0 -> {
             println(-1)
@@ -117,6 +120,20 @@ fun Sign(x : Int) : Int {
 //        println(1)
 //        return 1
 //    }
+}
+
+fun p18() {
+    var a = (1..50).random().toDouble()
+    println(a)
+    CircleS(a)
+    main()
+}
+
+fun CircleS(R : Double) : Double {
+    var pi = Math.PI
+    var S = pi * R
+    println(S)
+    return S
 }
 
 //fun a4(a : Int, b : Int) {
