@@ -38,7 +38,7 @@ fun main() {
         }
         "1" -> {
             println("ок")
-            exitProcess(0)
+            exitProcess(Int.MAX_VALUE)
         }
         else -> {
             println("При вычислениях произошла ошибка.")
