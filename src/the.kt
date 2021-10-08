@@ -26,6 +26,7 @@ fun main() {
                 "a2" -> a2()
                 "a18" -> a18()
                 "p16" -> p16()
+                "p17" -> p17()
                 "p18" -> p18()
                 else -> {
                     println("При вычислениях произошла ошибка.")
@@ -120,6 +121,22 @@ fun Sign(x: Int): Int {
 //        println(1)
 //        return 1
 //    }
+}
+
+fun p17(){
+    var a = (-50..50).random().toDouble()
+    var b = (-50..50).random().toDouble()
+    var c = (-50..50).random().toDouble()
+    println("$a --- $b --- $c")
+    println(RootsCount(a, b, c))
+}
+fun RootsCount(A : Double,B : Double,C : Double) : Int {
+    var D = B.pow(2) - 4 * A * C
+    return when {
+        D < 0 -> 0
+        D == 0.0 -> 1
+        else -> 2
+    }
 }
 
 fun p18() {
