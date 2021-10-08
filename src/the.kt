@@ -28,6 +28,7 @@ fun main() {
                 "p16" -> p16()
                 "p17" -> p17()
                 "p18" -> p18()
+                "p19" -> p19()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -142,15 +143,28 @@ fun RootsCount(A : Double,B : Double,C : Double) : Int {
 fun p18() {
     var a = (1..50).random().toDouble()
     println(a)
-    CircleS(a)
+    println(CircleS(a))
     main()
 }
 
 fun CircleS(R : Double) : Double {
     var pi = Math.PI
-    var S = pi * R
-    println(S)
+    var S = pi * R.pow(2)
     return S
+}
+
+fun p19(){
+    var a = (40..60).random().toDouble()
+    var b = (10..30).random().toDouble()
+    println("$a --- $b")
+    println(RingS(a, b))
+    main()
+}
+
+fun RingS(R1 : Double, R2 : Double) : Double {
+    var r1 = CircleS(R1)
+    var r2 = CircleS(R2)
+    return (r1 - r2)
 }
 
 //fun a4(a : Int, b : Int) {
