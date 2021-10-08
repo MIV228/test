@@ -124,14 +124,15 @@ fun Sign(x: Int): Int {
 //    }
 }
 
-fun p17(){
+fun p17() {
     var a = (-50..50).random().toDouble()
     var b = (-50..50).random().toDouble()
     var c = (-50..50).random().toDouble()
     println("$a --- $b --- $c")
     println(RootsCount(a, b, c))
 }
-fun RootsCount(A : Double,B : Double,C : Double) : Int {
+
+fun RootsCount(A: Double, B: Double, C: Double): Int {
     var D = B.pow(2) - 4 * A * C
     return when {
         D < 0 -> 0
@@ -147,13 +148,13 @@ fun p18() {
     main()
 }
 
-fun CircleS(R : Double) : Double {
+fun CircleS(R: Double): Double {
     var pi = Math.PI
     var S = pi * R.pow(2)
     return S
 }
 
-fun p19(){
+fun p19() {
     var a = (40..60).random().toDouble()
     var b = (10..30).random().toDouble()
     println("$a --- $b")
@@ -161,7 +162,7 @@ fun p19(){
     main()
 }
 
-fun RingS(R1 : Double, R2 : Double) : Double {
+fun RingS(R1: Double, R2: Double): Double {
     var r1 = CircleS(R1)
     var r2 = CircleS(R2)
     return (r1 - r2)
