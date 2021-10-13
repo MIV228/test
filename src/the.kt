@@ -32,6 +32,7 @@ fun main() {
                 "s1" -> s1()
                 "s2" -> s2()
                 "s3" -> s3()
+                "s4" -> s4()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -210,6 +211,22 @@ fun sus3(c: Char) {
     println(c1.toChar())
     println(c)
     println(c2.toChar())
+}
+
+fun s4() {
+    var n = (1..26).random()
+    sus4(n)
+    main()
+}
+
+fun sus4(n : Int) {
+    var b = 96
+    var a = n
+    while (a != 0) {
+        a =- 1
+        b =+ 1
+        println(b.toChar())
+    }
 }
 
 //fun a4(a : Int, b : Int) {
