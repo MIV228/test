@@ -29,6 +29,8 @@ fun main() {
                 "p17" -> p17()
                 "p18" -> p18()
                 "p19" -> p19()
+                "s1" -> s1()
+                "s2" -> s2()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -167,6 +169,31 @@ fun RingS(R1: Double, R2: Double): Double {
     var r2 = CircleS(R2)
     return (r1 - r2)
 }
+
+fun s1() {
+    var c: Char = (0..128).random().toChar()
+    sus1(c)
+    main()
+}
+
+fun sus1(c: Char): Int {
+    println(c)
+    println(c.toInt())
+    return c.toInt()
+}
+
+fun s2() {
+    var n = (32..126).random()
+    sus2(n)
+    main()
+}
+
+fun sus2(n: Int): Char {
+    println(n)
+    println(n.toChar())
+    return n.toChar()
+}
+
 
 //fun a4(a : Int, b : Int) {
 //    var n = 10
