@@ -256,18 +256,22 @@ fun amogus92() : Int {
     return 0
 }
 
-//fun a93() {
-//    amogus93()
-//    main()
-//}
-//
-//fun amogus93() {
-//    var n = (10..20).random()
-//    var l = List(n) {
-//        (0..100).random()
-//    }
-//
-//}
+fun a93() {
+    amogus93()
+    main()
+}
+
+fun amogus93() {
+    var n = (10..20).random()
+    var l = List(n) {
+        (0..100).random()
+    }
+    for (i in l.toList()) {
+        if (l[i] % 2 == 0) {
+            l.removeAt(l[i])
+        }
+    }
+}
 
 //fun a4(a : Int, b : Int) {
 //    var n = 10
