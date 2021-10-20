@@ -1,3 +1,5 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 import org.junit.jupiter.api.Test
 import kotlin.math.PI
 import kotlin.math.pow
@@ -33,6 +35,7 @@ fun main() {
                 "s2" -> s2()
                 "s3" -> s3()
                 "s4" -> s4()
+                "a92" -> a92()
                 else -> {
                     println("При вычислениях произошла ошибка.")
                     println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
@@ -197,7 +200,7 @@ fun sus2(n: Int): Char {
 }
 
 fun s3() {
-    var c : Char = (0..128).random().toChar()
+    var c: Char = (0..128).random().toChar()
     sus3(c)
     main()
 }
@@ -219,15 +222,52 @@ fun s4() {
     main()
 }
 
-fun sus4(n : Int) {
+fun sus4(n: Int) {
     var b = 96
     var a = n
     while (a != 0) {
-        a =- 1
-        b =+ 1
+        a = -1
+        b = +1
         println(b.toChar())
     }
 }
+
+fun a92() {
+    amogus92()
+    main()
+}
+
+fun amogus92() : Int {
+    var n = (10..20).random()
+    println(n)
+    var l = MutableList(n) {
+        (0..100).random()
+    }
+    println(l)
+    for (i in l.toList()) {
+        if (i % 2 == 0) {
+            continue
+        } else {
+            l.remove(i)
+        }
+    }
+    println(l.size)
+    println(l)
+    return 0
+}
+
+//fun a93() {
+//    amogus93()
+//    main()
+//}
+//
+//fun amogus93() {
+//    var n = (10..20).random()
+//    var l = List(n) {
+//        (0..100).random()
+//    }
+//
+//}
 
 //fun a4(a : Int, b : Int) {
 //    var n = 10
