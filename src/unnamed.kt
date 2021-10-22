@@ -14,8 +14,8 @@ fun errors() {
     }
 }
 fun unnamedMain() {
-    var a = make_Powerup(5, 6)
-    var m = Powerup(2.5, 3)
+    var a = make_Powerup(5, 6, "a")
+    var m = Powerup(2.5, 3, "m")
     var b = Powerup()
     var c = make_AnotherPowerup(3, 45)
     var d = AnotherPowerup()
@@ -34,7 +34,7 @@ fun unnamedMain() {
     c.display()
 }
 
-fun make_Powerup(first: Int, second: Int) : Powerup {
+fun make_Powerup(first: Int, second: Int, name: String) : Powerup {
     var obj = Powerup()
     obj.first = first.toDouble()
     obj.second = second
@@ -49,7 +49,8 @@ fun make_AnotherPowerup(first: Int, second: Int) : AnotherPowerup {
 
 class Powerup (
     var first : Double = 0.0,
-    var second : Int = 0
+    var second : Int = 0,
+    var name : String = ""
     ) {
     fun power() : Double {
         return first.pow(second)
