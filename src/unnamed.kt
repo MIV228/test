@@ -2,7 +2,7 @@
 
 import java.lang.Exception
 import kotlin.math.pow
-fun errors() {
+fun mainErrors() {
     try {
         unnamedMain()
     } catch (e:Exception) {
@@ -10,11 +10,11 @@ fun errors() {
         println(e.stackTrace)
         println("Крч произошла ошибка.")
         println("ПРОЦЕСС ВЫПОЛНЯЕТСЯ ЗАНОВО.")
-        unnamedMain()
+        mainErrors()
     }
 }
 fun unnamedMain() {
-    var a = make_Powerup(5, 6, "a")
+    var a = make_Powerup(5, 6)
     var m = Powerup(2.5, 3, "m")
     var b = Powerup()
     var c = make_AnotherPowerup(3, 45)
@@ -34,10 +34,11 @@ fun unnamedMain() {
     c.display()
 }
 
-fun make_Powerup(first: Int, second: Int, name: String) : Powerup {
+fun make_Powerup(first: Int, second: Int) : Powerup {
     var obj = Powerup()
     obj.first = first.toDouble()
     obj.second = second
+    obj.name = readLine()!!.toString()
     return obj
 }
 fun make_AnotherPowerup(first: Int, second: Int) : AnotherPowerup {
