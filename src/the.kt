@@ -268,7 +268,7 @@ fun amogus93() {
     }
     for (i in l.toList()) {
         if (l[i] % 2 == 0) {
-            l.removeAt(l[i])
+//            l.remove(l[i])
         }
     }
 }
