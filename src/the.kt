@@ -47,6 +47,7 @@ fun main() {
             println("ок")
             exitProcess(Int.MAX_VALUE)
         }
+        "2" -> unnamedMain()
         else -> {
             println("При вычислениях произошла ошибка.")
             println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
