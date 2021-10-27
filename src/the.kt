@@ -48,6 +48,7 @@ fun main() {
             exitProcess(Int.MAX_VALUE)
         }
         "2" -> mainErrors()
+        "3" -> game()
         else -> {
             println("При вычислениях произошла ошибка.")
             println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
