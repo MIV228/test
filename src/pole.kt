@@ -49,6 +49,34 @@ fun game() {
     while (n == 0) {
         println("Задуманное слово: $current")
         Thread.sleep(500)
+        println("Крутите барабан!")
+        Thread.sleep(500)
+        println("*Барабан долго крутится*")
+        var points = listOf<Int>(
+            0,
+            0,
+            5,
+            5,
+            10,
+            10,
+            20,
+            20,
+            50,
+            50,
+            100,
+            250,
+            500,
+            1000,
+            -1,
+            -2
+        )
+        var gift = points.random()
+        Thread.sleep(3000)
+        when (gift) {
+            -1 -> {
+                println("Ура! Подарочек в студию!")
+            }
+        }
         println("Что будете вводить: слово или букву? (1/2)")
         var answer = readLine()!!.toString()
         Thread.sleep(500)
