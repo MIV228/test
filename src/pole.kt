@@ -1,5 +1,7 @@
 @file:Suppress("UnusedEquals", "ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
 
+import com.sun.jdi.event.ThreadStartEvent
+import kotlin.math.E
 import kotlin.system.exitProcess
 
 fun game() {
@@ -115,6 +117,45 @@ fun game() {
                 println("Все ваши очки умножаются в 2 раза!")
                 Thread.sleep(500)
                 points *= 2
+            }
+            -4 -> { //:2
+                println("Сектор \":2\"!")
+                Thread.sleep(500)
+                println("Эхх, как жаль...")
+                Thread.sleep(500)
+                println("Количество ваших очков делится на 2!")
+                Thread.sleep(500)
+                points /= 2
+            }
+            -5 -> { //ключ
+                println("Сектор \"Ключ\"!")
+                Thread.sleep(500)
+                println("Хмм, что же я вижу?")
+                Thread.sleep(500)
+                println("Да это же три ключа!")
+                Thread.sleep(500)
+                println("Шкатулки в студию!!!")
+                Thread.sleep(3000)
+                println("Ну, какую из трех открываешь?")
+                Thread.sleep(500)
+                var answer = readLine()!!.toInt()
+                var validChoose = (1..3).random()
+                Thread.sleep(500)
+                if (answer != validChoose) {
+                    println("Увы, неправильный выбор.")
+                    Thread.sleep(500)
+                    println("Удачи в следующий раз, а мы продолжаем!")
+                    Thread.sleep(500)
+                } else if (answer == validChoose) {
+                    println("И это правильный ответ!")
+                    Thread.sleep(500)
+                    println("Вы получаете целых 2000 очков!")
+                    Thread.sleep(500)
+                    points += 2000
+                }
+            }
+            else -> {
+
             }
         }
         println("Что будете вводить: слово или букву? (1/2)")
