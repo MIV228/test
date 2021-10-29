@@ -155,7 +155,13 @@ fun game() {
                 }
             }
             else -> {
-
+                println("Сектор \"$gift\"!")
+                Thread.sleep(500)
+                println("Здесь все очень просто!")
+                Thread.sleep(500)
+                println("Вы получаете $gift очков!")
+                Thread.sleep(500)
+                points += gift
             }
         }
         println("Что будете вводить: слово или букву? (1/2)")
