@@ -21,7 +21,7 @@ fun game() {
         "вирус"
     )
     var trueStr = strList.random()
-    var opisanie: String
+    var opisanie = ""
     var current = ""
     when (trueStr) {
         "арбуз" -> {
