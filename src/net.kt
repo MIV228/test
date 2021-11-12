@@ -12,9 +12,12 @@ fun netConnect() {
             postId = 1
         } else if (postId == 0) {
             exitProcess(0)
+        } else if (postId < 0) {
+            main()
         } else if (postId > 100) {
             postId = 100
         }
+
         try {
             val url = URL("https://jsonplaceholder.typicode.com/posts/$postId")
             val data = url.readText()
@@ -31,6 +34,5 @@ fun netConnect() {
             Thread.sleep(1000)
             netConnect()
         }
-
     }
 }
