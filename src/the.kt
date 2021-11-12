@@ -50,6 +50,7 @@ fun main() {
         "2" -> mainErrors()
         "3" -> game()
         "4" -> startMafia()
+        "5" -> netConnect()
         else -> {
             println("При вычислениях произошла ошибка.")
             println("ВЫПОЛНЯТСЯ ПЕРЕЗАПУСК")
