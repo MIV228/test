@@ -1,23 +1,28 @@
 class Player {
-    val trick: Int = (1..10).random()
-    var role: Role = Role.PEACEFUL
+    val trick : Int = (1..10).random()
+    var role : Role = Role.PEACEFUL
 }
 
 fun startMafia() {
-    var players: List<Player> = listOf(
-        Player(),
-        Player(),
-        Player(),
-        Player(),
+    println("Сколько игроков?")
+    var answer = readLine()!!.toIntOrNull()
+    if (answer == null) {
+        answer = 5
+    }
+    var players : List<Player> = List(answer) {
         Player()
-    )
+    }
 
     for (player in players) {
         if (players.find { player.role == Role.MAFIA } == null) {
             players.random().role = Role.MAFIA
+        } else {
+            continue
         }
         if (players.find { player.role == Role.DOCTOR } == null) {
             players.random().role = Role.DOCTOR
+        } else {
+            continue
         }
     }
 
@@ -57,8 +62,15 @@ fun startMafia() {
             Thread.sleep(1000)
             break
         }
-
-        Thread.sleep(500)
+        if (answer >= 50) {
+            Thread.sleep(250)
+        } else if (answer >= 150) {
+            Thread.sleep(100)
+        } else if (answer >= 250) {
+            Thread.sleep(50)
+        } else {
+            Thread.sleep(5)
+        }
     }
     main()
 }
