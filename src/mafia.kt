@@ -62,15 +62,6 @@ fun startMafia() {
             Thread.sleep(1000)
             break
         }
-        if (answer >= 50) {
-            Thread.sleep(250)
-        } else if (answer >= 150) {
-            Thread.sleep(100)
-        } else if (answer >= 250) {
-            Thread.sleep(50)
-        } else {
-            Thread.sleep(5)
-        }
     }
     main()
 }
